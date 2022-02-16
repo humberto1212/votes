@@ -3,10 +3,16 @@ package main
 import (
 	"Desktop/Golang/Votes/datafile"
 	"fmt"
+	"log"
 )
 
 func main() {
 
-	fmt.Println(datafile.GetStrings("./files/votes"))
+	lines, err := datafile.GetStrings("./files/votes")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(lines)
 
 }
