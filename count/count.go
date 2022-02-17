@@ -1,8 +1,6 @@
 package count
 
-import "fmt"
-
-func CountLines(list []string) {
+func CountLines(list []string) ([]string, []int) {
 	var names []string
 	var counts []int
 
@@ -21,8 +19,6 @@ func CountLines(list []string) {
 		}
 	}
 
-	for i, name := range names {
-		fmt.Printf("%s: %d\n", name, counts[i])
-	}
+	return names, counts
 
 }
