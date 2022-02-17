@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Desktop/Golang/Votes/count"
 	"Desktop/Golang/Votes/datafile"
-	"fmt"
 	"log"
 )
 
@@ -13,6 +13,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(lines)
+	count.CountLines(lines)
 
 }
