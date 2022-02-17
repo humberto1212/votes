@@ -3,6 +3,7 @@ package main
 import (
 	"Desktop/Golang/Votes/count"
 	"Desktop/Golang/Votes/datafile"
+	"fmt"
 	"log"
 )
 
@@ -13,6 +14,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	count.CountLines(lines)
+	names, counts := count.CountLines(lines)
+
+	for i, name := range names {
+		fmt.Printf("%s: %d\n", name, counts[i])
+	}
 
 }
