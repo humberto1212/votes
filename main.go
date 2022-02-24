@@ -14,10 +14,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	names, counts := count.CountLines(lines)
+	counts := count.CountLines(lines)
 
-	for i, name := range names {
-		fmt.Printf("%s: %d\n", name, counts[i])
-	}
+	fmt.Println(counts)
+
+	//------ slice version ----------------
+	// names, counts := count.CountLines(lines)
+
+	// for i, name := range names {
+	// 	fmt.Printf("%s: %d\n", name, counts[i])
+	// }
 
 }
