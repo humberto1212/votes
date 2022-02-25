@@ -16,7 +16,9 @@ func main() {
 
 	counts := count.CountLines(lines)
 
-	fmt.Println(counts)
+	for key, vote := range counts {
+		fmt.Println(key, vote)
+	}
 
 	//------ slice version ----------------
 	// names, counts := count.CountLines(lines)
